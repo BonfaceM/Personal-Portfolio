@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Projects</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <div class="brand">
+      <span class="material-symbols-outlined">token</span>
+      <h2>Bonface</h2>
+    </div>
+
+    <div class="nav-links">
+       <a href="index.html">Home</a>
+       <a href="projects.html" class="active">Projects</a>
+       <a href="about.html">About</a>
+       <a href="contact.html">Contact</a>
+    </div>
+
+    <button id="themeToggle" class="icon-btn">
+      <span class="material-symbols-outlined">dark_mode</span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <h1>My Projects</h1>
+  <p>Some of the digital products and systems I have built.</p>
+</section>
+
+<!-- PROJECTS -->
+<section class="products-section">
+  <div class="products-grid">
+
+    <div class="product-card">
+      <h3>Portfolio Website</h3>
+      <p>Personal brand website built with HTML, CSS & JavaScript.</p>
+    </div>
+
+    <div class="product-card">
+      <h3>E-commerce Store</h3>
+      <p>Online store with shopping cart and product system.</p>
+    </div>
+
+    <div class="product-card">
+      <h3>Forex Tracker</h3>
+      <p>Trading journal and risk-management web app.</p>
+    </div>
+
+    <div class="product-card">
+      <h3>Virtual Assistant Website</h3>
+      <p>Lead-generation website for remote business services.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Bonface Mwenda • Digital Entrepreneur & Forex Trader</p>
+</footer>
+
+<script>
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+
+if(localStorage.getItem("theme") === "dark"){
+  body.classList.add("dark");
+}
+
+themeToggle.onclick = () => {
+  body.classList.toggle("dark");
+  localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Me</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="page-wrapper">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="brand">
+            <span class="material-symbols-outlined">token</span>
+            <h2>Bonface</h2>
+        </div>
+
+       <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="project.html">Project</a>
+    <a href="contact.html" class="active"> Contact</a>
+    
+        </div>
+
+        <button class="icon-btn" id="themeToggle">
+            <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+    <h1>Let’s Work Together</h1>
+    <p>Have a project, business idea, or opportunity?  
+       Send me a message and I’ll get back to you.</p>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+
+<div class="contact-grid">
+
+<!-- FORM -->
+<div class="contact-form-wrapper">
+    <h2>Send Me a Message</h2>
+
+    <form id="contactForm">
+        <div class="form-row">
+            <input type="text" placeholder="First Name" id="firstName" required>
+            <input type="text" placeholder="Last Name" id="lastName" required>
+        </div>
+
+        <input type="email" placeholder="Email Address" id="email" required>
+        <input type="tel" placeholder="Phone (optional)" id="phone">
+
+        <select id="subject" required>
+            <option value="">Select Reason</option>
+            <option value="hire">Hire You</option>
+            <option value="project">Project Proposal</option>
+            <option value="business">Business Partnership</option>
+            <option value="trading">Forex / Trading</option>
+            <option value="other">Other</option>
+        </select>
+
+        <textarea id="message" rows="6" placeholder="Your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<!-- INFO -->
+<div class="contact-info-wrapper">
+    <h2>Contact Information</h2>
+
+    <div class="info-card">
+        <span class="material-symbols-outlined">location_on</span>
+        <div>
+            <h3>Location</h3>
+            <p>Nairobi, Kenya</p>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <span class="material-symbols-outlined">mail</span>
+        <div>
+            <h3>Email</h3>
+            <p>bmwenda399@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <span class="material-symbols-outlined">call</span>
+        <div>
+            <h3>Phone / WhatsApp</h3>
+            <p>+254 791 631 060</p>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <span class="material-symbols-outlined">schedule</span>
+        <div>
+            <h3>Availability</h3>
+            <p>Monday – Saturday<br>9AM – 8PM (EAT)</p>
+        </div>
+    </div>
+</div>
+
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+<h2>Quick Questions</h2>
+
+<div class="faq-grid">
+    <div>
+        <h3>What services do you offer?</h3>
+        <p>I offer virtual assistant services, web development, ecommerce setup, and Forex trading solutions.</p>
+    </div>
+
+    <div>
+        <h3>How can I hire you?</h3>
+        <p>Use the contact form or WhatsApp me for fast response.</p>
+    </div>
+
+    <div>
+        <h3>Do you work with international clients?</h3>
+        <p>Yes, I work with clients globally.</p>
+    </div>
+
+    <div>
+        <h3>How do payments work?</h3>
+        <p>I accept PayPal, Wise, bank transfer, and crypto.</p>
+    </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 Bonface Mwenda — Digital Entrepreneur & Forex Trader</p>
+</footer>
+
+</div>
+
+<script>
+
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") body.classList.add("dark");
+
+themeToggle.onclick = () => {
+    body.classList.toggle("dark");
+    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+};
+
+document.getElementById("contactForm").addEventListener("submit", e => {
+    e.preventDefault();
+    alert("Thank you! Your message has been sent.");
+    e.target.reset();
+});
+
+</script>
+
+</body>
+</html>

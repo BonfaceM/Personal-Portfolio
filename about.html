@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About-Me</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <div class="brand">
+      <span class="material-symbols-outlined">token</span>
+      <h2>Bonface</h2>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+     <a href="about.html" class="active">About</a>
+      <a href="project.html">Project</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <button id="themeToggle" class="icon-btn">
+      <span class="material-symbols-outlined">dark_mode</span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <h1>About Me</h1>
+  <p>Who I am, what I do, and how I help businesses grow.</p>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section class="about-section">
+
+  <p class="about-text">
+    I am Bonface Mwenda, a digital entrepreneur, Forex trader, and virtual assistant based in Nairobi, Kenya.
+    I help individuals and businesses build strong online systems, automate their operations, and generate income through smart digital strategies.
+    Whether it is building high-converting websites, managing virtual operations, or trading financial markets,
+    I focus on delivering results that create real growth and long-term value.
+  </p>
+
+</section>
+
+<!-- SKILLS -->
+<section class="skills-section">
+  <h2 class="section-title">What I Do</h2>
+
+  <div class="skills-grid">
+
+
+    <div class="skill-card">Virtual Assistance</div>
+    <div class="skill-card">Web Development</div>
+    <div class="skill-card">Forex Trading</div>
+    <div class="skill-card">E-commerce Systems</div>
+    <div class="skill-card">Business Automation</div>
+    <div class="skill-card">Digital Marketing</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Bonface Mwenda • Digital Entrepreneur & Forex Trader</p>
+</footer>
+
+<script>
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+
+if(localStorage.getItem("theme") === "dark"){
+  body.classList.add("dark");
+}
+
+themeToggle.onclick = () => {
+  body.classList.toggle("dark");
+  localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+};
+</script>
+
+</body>
+</html>
